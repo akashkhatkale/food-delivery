@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:paddingVertical="50dp"
+    android:background="@color/colorWhite"
+    android:layout_height="match_parent"
+    tools:context=".ui.start.LoginActivity">
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"        android:layout_marginHorizontal="20dp"
+        android:src="@drawable/logo_sample"
+        android:adjustViewBounds="true"
+        />
+
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome"
+        android:textSize="20sp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/montserrat_regular"
+        android:textColor="@color/colorGray"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Perfect fueling point to fuel your stomach"
+        android:textSize="24sp"
+        android:layout_marginHorizontal="20dp"
+
+        android:fontFamily="@font/montserrat_medium"
+        android:textColor="@color/colorPrimary"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <EditText
+                android:id="@+id/phoneText_phone"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:drawableStart="@drawable/white_phone_icon"
+                android:drawableTint="#70000000"
+                android:drawablePadding="15dp"
+                android:paddingStart="20dp"
+                android:fontFamily="@font/montserrat_medium"
+                android:hint="Enter your phone number"
+                android:textColor="@color/colorPrimary"
+                android:textColorHint="#70000000"
+                android:layout_marginHorizontal="20dp"
+                android:textSize="12sp"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:maxLength="10"
+                android:inputType="number"
+                android:visibility="visible"
+                android:background="@drawable/edittext_background"
+                />
+            <com.mukesh.OtpView
+                android:id="@+id/otpText_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:itemBackground="#fff"
+                android:textColor="@color/colorGray"
+                app:OtpItemCount="6"
+                android:layout_marginHorizontal="10dp"
+                android:layout_centerInParent="true"
+                app:OtpCursorWidth="0dp"
+                app:OtpItemRadius="5dp"
+                app:OtpItemSpacing="5dp"
+                android:visibility="gone"
+                app:OtpViewType="rectangle"
+                android:layout_gravity="center"
+                />
+        </RelativeLayout>
+        <LinearLayout
+            android:id="@+id/extraButton_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:visibility="invisible"
+            android:layout_gravity="center_horizontal"
+            >
+            <TextView
+                android:id="@+id/resendOtp_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Resend OTP"
+                android:textSize="12sp"
+                android:enabled="false"
+                android:alpha="0.5"
+                android:fontFamily="@font/montserrat_medium"
+                android:textColor="@color/colorPrimary"
+                />
+            <View
+                android:layout_width="3dp"
+                android:layout_height="3dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/black_dot"
+                />
+            <TextView
+                android:id="@+id/changePhone_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Change number"
+                android:textSize="12sp"
+                android:fontFamily="@font/montserrat_medium"
+                android:textColor="@color/colorPrimary"
+                />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginHorizontal="20dp"
+        >
+
+        <Button
+            android:id="@+id/submitButton_phone"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:fontFamily="@font/montserrat_medium"
+            android:textColor="@color/colorWhite"
+            android:text="Login with phone number"
+            android:gravity="center_vertical"
+            android:drawableStart="@drawable/white_phone_icon"
+            android:paddingStart="20dp"
+            android:drawablePadding="25dp"
+            android:layout_centerInParent="true"
+            android:textAllCaps="false"
+            android:textSize="12sp"
+            android:background="@drawable/button_background"
+            />
+
+        <ProgressBar
+            android:id="@+id/submitProgress_phone"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:translationZ="10dp"
+            android:visibility="invisible"
+            android:layout_centerVertical="true"
+            android:indeterminateTint="@color/colorWhite"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="20dp"
+            />
+    </RelativeLayout>
+
+
+</LinearLayout>

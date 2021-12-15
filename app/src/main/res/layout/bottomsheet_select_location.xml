@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:paddingHorizontal="20dp"
+    android:background="@color/colorPrimary"
+    android:paddingVertical="10dp">
+
+    <View
+        android:layout_width="80dp"
+        android:layout_height="2dp"
+        android:background="#30ffffff"
+        android:layout_gravity="center_horizontal"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/allLocationsRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        />
+
+    <LinearLayout
+        android:id="@+id/newLocationLayout_row"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingTop="10dp"
+        android:paddingHorizontal="15dp"
+        android:paddingBottom="10dp">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            app:srcCompat="@drawable/white_add_icon" />
+
+        <TextView
+            android:id="@+id/locationName_cart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="Add new location"
+            android:textColor="@color/colorWhite"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/submitButton_selectLocation"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:fontFamily="@font/montserrat_medium"
+        android:textColor="@color/colorWhite"
+        android:text="Done"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_centerInParent="true"
+        android:textAllCaps="false"
+        android:layout_marginBottom="10dp"
+        android:textSize="14sp"
+        android:background="@drawable/yellow_button_background"
+        />
+
+</LinearLayout>

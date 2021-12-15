@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#1A1A1A</color>
+    <color name="colorPrimaryDark">#090909</color>
+    <color name="colorAccent">#F7A100</color>
+
+
+    <color name="colorWhite">#fff</color>
+    <color name="colorGray">#50000000</color>
+    <color name="colorYellow">#F7A100</color>
+
+    <color name="recieved">#50000000</color>
+    <color name="confirmed">#F7A100</color>
+    <color name="delivery">#F7A100</color>
+    <color name="delivered">#4CAF50</color>
+    <color name="cancelled">#B80D01</color>
+
+
+</resources>

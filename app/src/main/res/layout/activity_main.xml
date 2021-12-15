@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".ui.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        >
+        <FrameLayout
+            android:id="@+id/mainFrameLayout"
+            android:layout_width="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_height="match_parent">
+        </FrameLayout>
+
+
+        <include
+            android:id="@+id/currentOrderLayout_main"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:visibility="gone"
+            android:layout_marginHorizontal="10dp"
+            android:layout_centerHorizontal="true"
+            layout="@layout/layout_current_order_pop" />
+
+
+    </RelativeLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#20000000"
+        />
+
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:theme="@style/Theme.MaterialComponents.Light.DarkActionBar"
+        app:itemIconSize="25dp"
+        app:itemTextAppearanceActive="@style/BottomNavigationTextAppearance"
+        app:itemTextAppearanceInactive="@style/BottomNavigationTextAppearanceinactive"
+        app:itemIconTint="@drawable/bottom_nav_selector"
+        app:itemTextColor="@drawable/bottom_nav_selector"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/bottom_menu" />
+
+</LinearLayout>

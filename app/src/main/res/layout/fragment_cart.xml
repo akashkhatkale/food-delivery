@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:shimmer="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/colorWhite"
+    tools:context=".ui.main.CartFragment">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/locationLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/yellow_button_background"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingTop="10dp"
+                android:paddingHorizontal="15dp"
+                android:paddingBottom="10dp">
+
+                <ImageView
+                    android:id="@+id/locationIcon_cart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/white_location_icon" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:orientation="vertical"
+                    >
+                    <TextView
+                        android:id="@+id/locationTag_cart"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:text="Select a location"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="14sp" />
+                    <TextView
+                        android:id="@+id/locationName_cart"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:text="No location selected"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:textColor="@color/colorWhite"
+                        android:alpha="0.7"
+                        android:textSize="10sp" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/nextIcon_cart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    app:srcCompat="@drawable/white_arrow_forward" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="10dp"
+                >
+
+                <com.facebook.shimmer.ShimmerFrameLayout
+                    android:id="@+id/shimmerCartContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    shimmer:shimmer_duration="2000"
+                    android:visibility="invisible"
+                    android:layout_centerHorizontal="true"
+                    >
+                    <include
+                        layout="@layout/placeholder_recycler"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        />
+
+                </com.facebook.shimmer.ShimmerFrameLayout>
+
+                <TextView
+                    android:id="@+id/status_cart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible"
+                    android:text="Your cart is empty"
+                    android:textColor="@color/colorGray"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:textSize="14sp"
+                    android:layout_centerInParent="true"
+                    />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/cartRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_height="wrap_content"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    />
+            </RelativeLayout>
+
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/priceLayout_cart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        android:background="#EFEFEF"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="20dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dp"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                android:text="Item"
+                android:textColor="#707070"
+                android:fontFamily="@font/montserrat_medium"
+                android:textSize="14sp"
+                android:layout_centerInParent="true"
+                />
+            <TextView
+                android:id="@+id/itemPrice_cart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                android:text="..."
+                android:textColor="@color/colorPrimary"
+                android:fontFamily="@font/montserrat_medium"
+                android:textSize="14sp"
+                android:layout_centerInParent="true"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginHorizontal="5dp"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                android:text="Delivery fee"
+                android:textColor="#707070"
+                android:fontFamily="@font/montserrat_medium"
+                android:textSize="14sp"
+                android:layout_centerInParent="true"
+                />
+            <TextView
+                android:id="@+id/deliveryPrice_cart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                android:text="..."
+                android:textColor="@color/colorPrimary"
+                android:fontFamily="@font/montserrat_medium"
+                android:textSize="14sp"
+                android:layout_centerInParent="true"
+                />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/orderButton_cart"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/button_background"
+            >
+
+            <TextView
+                android:id="@+id/itemTotal_cart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                android:text="..."
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="20dp"
+                android:textColor="#fff"
+                android:fontFamily="@font/montserrat_semibold"
+                android:textSize="14sp"
+                android:layout_centerInParent="true"
+                />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:gravity="center_vertical"
+                android:layout_marginEnd="10dp"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible"
+                    android:text="Order Now"
+                    android:textColor="#fff"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:textSize="14sp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_centerInParent="true"
+                    />
+
+                <ImageView
+                    android:id="@+id/orderIcon_cart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/white_arrow_forward"
+                    />
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</LinearLayout>

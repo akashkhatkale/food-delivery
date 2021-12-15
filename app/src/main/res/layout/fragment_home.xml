@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:shimmer="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".ui.main.HomeFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:orientation="horizontal"
+        android:paddingHorizontal="15dp"
+        android:gravity="center_vertical"
+        >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/white_location_icon"
+            android:backgroundTint="@color/colorPrimary"
+            />
+        <LinearLayout
+            android:id="@+id/locationHeadingLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:gravity="center_vertical"
+            android:layout_gravity="center_vertical"
+            >
+            <TextView
+                android:id="@+id/locationText_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="..."
+                android:textSize="16sp"
+                android:fontFamily="@font/montserrat_medium"
+                android:textColor="@color/colorPrimary"
+                />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="2dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/white_arrowdown_icon"
+                android:backgroundTint="@color/colorPrimary"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#10000000"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/offersRecyclerView"
+        />
+
+
+
+    <com.google.android.flexbox.FlexboxLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:flexWrap="wrap"
+        app:alignItems="stretch"
+        android:layout_marginHorizontal="15dp"
+        app:alignContent="stretch" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="5dp"
+            android:id="@+id/shawarmaButton_home"
+            android:background="@drawable/button_background"
+            >
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/shawarma_icon"
+                />
+            <TextView
+                android:id="@+id/shawarmaText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Shawarma"
+                android:layout_marginStart="5dp"
+                android:fontFamily="@font/montserrat_medium"
+                android:textSize="14sp"
+                android:textColor="@color/colorWhite"
+                android:gravity="center"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:id="@+id/friesButton_home"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="5dp"
+            android:background="@drawable/edittext_background"
+            >
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/fries_icon"
+                />
+            <TextView
+                android:id="@+id/friesText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fries"
+                android:layout_marginStart="5dp"
+                android:fontFamily="@font/montserrat_medium"
+                android:textSize="14sp"
+                android:textColor="@color/colorPrimary"
+                android:gravity="center"
+                />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:id="@+id/burgersButton_home"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="5dp"
+            android:background="@drawable/edittext_background"
+            >
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/burger_icon"
+                />
+            <TextView
+                android:id="@+id/burgerText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Burgers"
+                android:layout_marginStart="5dp"
+                android:fontFamily="@font/montserrat_medium"
+                android:textSize="14sp"
+                android:textColor="@color/colorPrimary"
+                android:gravity="center"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:id="@+id/mocktailButton_home"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="5dp"
+            android:background="@drawable/edittext_background"
+            >
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/mocktail_icon"
+                />
+            <TextView
+                android:id="@+id/mocktailText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mocktails"
+                android:layout_marginStart="5dp"
+                android:fontFamily="@font/montserrat_medium"
+                android:textSize="14sp"
+                android:textColor="@color/colorPrimary"
+                android:gravity="center"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:visibility="invisible"
+            android:id="@+id/appetizersButton_home"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="5dp"
+            android:background="@drawable/edittext_background"
+            >
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/appetizers_icon"
+                />
+            <TextView
+                android:id="@+id/appetizersText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Appetizers"
+                android:layout_marginStart="5dp"
+                android:fontFamily="@font/montserrat_medium"
+                android:textSize="14sp"
+                android:textColor="@color/colorPrimary"
+                android:gravity="center"
+                />
+
+        </LinearLayout>
+
+
+
+    </com.google.android.flexbox.FlexboxLayout>
+
+
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        >
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmerHomeContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            shimmer:shimmer_duration="2000"
+            android:visibility="invisible"
+            android:layout_centerHorizontal="true"
+            >
+            <include
+                android:id="@+id/searchPlaceholder_search"
+                layout="@layout/placeholder_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+        <TextView
+            android:id="@+id/status_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:text="Your search did not have any results"
+            android:textColor="@color/colorGray"
+            android:fontFamily="@font/montserrat_medium"
+            android:textSize="14sp"
+            android:layout_centerInParent="true"
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/itemsRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_height="wrap_content"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            />
+    </RelativeLayout>
+
+
+</LinearLayout>

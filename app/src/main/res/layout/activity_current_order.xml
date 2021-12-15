@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:animateLayoutChanges="true"
+    android:background="@color/colorWhite"
+    tools:context=".ui.orders.CurrentOrderActivity">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/currentOrderToolbar"
+        app:title=" "
+        />
+
+<!--    <TextView-->
+<!--        android:id="@+id/totalAmount_currentOrder"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginEnd="15dp"-->
+<!--        android:fontFamily="@font/montserrat_semibold"-->
+<!--        android:layout_marginStart="22dp"-->
+<!--        android:text="Total amount to be paid : "-->
+<!--        android:textColor="@color/colorPrimary"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:textSize="16sp" />-->
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:gravity="center_vertical"-->
+<!--        android:layout_marginHorizontal="20dp"-->
+<!--        >-->
+<!--        <ImageView-->
+<!--            android:id="@+id/icon_currentOrder"-->
+<!--            android:layout_width="20dp"-->
+<!--            android:layout_height="20dp"-->
+<!--            android:background="@drawable/white_home_icon"-->
+<!--            android:backgroundTint="#50000000"-->
+<!--            />-->
+<!--        <TextView-->
+<!--            android:id="@+id/address_currentOrder"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="..."-->
+<!--            android:maxLines="1"-->
+<!--            android:ellipsize="end"-->
+<!--            android:textColor="#50000000"-->
+<!--            android:fontFamily="@font/montserrat_medium"-->
+<!--            android:layout_marginStart="5dp"-->
+<!--            android:textSize="12sp"-->
+<!--            />-->
+
+<!--    </LinearLayout>-->
+
+<!--    <View-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="1dp"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:background="#10000000"-->
+<!--        />-->
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:gravity="center_vertical"-->
+<!--        android:paddingEnd="20dp"-->
+<!--        >-->
+<!--        <EditText-->
+<!--            android:id="@+id/requestText_currentOrder"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="1"-->
+<!--            android:drawableLeft="@drawable/white_request_icon"-->
+<!--            android:drawableTint="@color/colorGray"-->
+<!--            android:hint="Any requests to the restaurant ?"-->
+<!--            android:textColorHint="@color/colorGray"-->
+<!--            android:fontFamily="@font/montserrat_medium"-->
+<!--            android:textSize="12sp"-->
+<!--            android:layout_marginEnd="10dp"-->
+<!--            android:inputType="textMultiLine"-->
+<!--            android:paddingHorizontal="20dp"-->
+<!--            android:drawablePadding="15dp"-->
+<!--            android:paddingVertical="15dp"-->
+<!--            android:background="@color/colorWhite"-->
+<!--            />-->
+<!--        <ImageView-->
+<!--            android:id="@+id/sendRequestButton"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:background="@drawable/white_send_icon"-->
+<!--            android:backgroundTint="@color/colorPrimary"-->
+<!--            />-->
+
+
+<!--    </LinearLayout>-->
+
+<!--    <View-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="1dp"-->
+<!--        android:background="#10000000"-->
+<!--        />-->
+
+<!--    <RelativeLayout-->
+<!--        android:id="@+id/cancelOrderButton"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="50dp"-->
+<!--        android:layout_marginHorizontal="10dp"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        >-->
+
+
+<!--        <Button-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="50dp"-->
+<!--            android:fontFamily="@font/montserrat_medium"-->
+<!--            android:textColor="@color/colorWhite"-->
+<!--            android:text="Cancel Order"-->
+<!--            android:gravity="center"-->
+<!--            android:layout_centerInParent="true"-->
+<!--            android:textAllCaps="false"-->
+<!--            android:alpha="0.5"-->
+<!--            android:textSize="12sp"-->
+<!--            android:background="@drawable/button_background"-->
+<!--            android:translationZ="-1dp"-->
+<!--            />-->
+
+
+
+
+<!--    </RelativeLayout>-->
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ordersRecyclerView"
+        />
+
+
+
+
+
+
+</LinearLayout>

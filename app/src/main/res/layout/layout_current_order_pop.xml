@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/currentOrderLayout"
+    android:orientation="horizontal"
+    android:background="@drawable/button_background"
+    android:paddingHorizontal="15dp"
+    android:paddingVertical="15dp"
+    android:gravity="center_vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/icon_currentOrderLayout"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/white_order_icon"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_weight="1"
+        >
+        <TextView
+            android:id="@+id/title_currentOrderLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="Your order has been placed"
+            android:textColor="@color/colorWhite"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/subtitle_currentOrderLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="Our chefs have started preparing food for you !!"
+            android:textColor="#90ffffff"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/white_arrow_forward"
+        />
+
+</LinearLayout>

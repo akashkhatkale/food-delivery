@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.location.AddMapLocationActivity">
+
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+         />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_centerHorizontal="true"
+        >
+
+        <ImageView
+            android:id="@+id/backButton_map"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="15dp"
+            android:padding="5dp"
+            android:background="@drawable/whitecircle_background"
+            android:src="@drawable/black_back_icon"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/locationname_background"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Move the marker to mark your location"
+            android:textSize="10sp"
+            android:fontFamily="@font/montserrat_medium"
+            android:textColor="@color/colorGray"
+            android:layout_marginStart="3dp"
+            />
+        <TextView
+            android:id="@+id/locationName_map"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="..."
+            android:textSize="12sp"
+            android:drawablePadding="3dp"
+            android:layout_marginTop="5dp"
+            android:drawableStart="@drawable/smallwhite_location_icon"
+            android:drawableTint="@color/colorPrimary"
+            android:gravity="center_vertical"
+            android:fontFamily="@font/montserrat_medium"
+            android:textColor="@color/colorPrimary"
+            />
+        <Button
+            android:id="@+id/confirmLocation_map"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:fontFamily="@font/montserrat_medium"
+            android:textColor="@color/colorWhite"
+            android:text="Confirm Location"
+            android:gravity="center_vertical"
+            android:drawableStart="@drawable/white_select_icon"
+            android:paddingStart="20dp"
+            android:drawablePadding="25dp"
+            android:layout_centerInParent="true"
+            android:textAllCaps="false"
+            android:layout_marginTop="20dp"
+            android:textSize="12sp"
+            android:background="@drawable/button_background"
+            />
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/searchLayout"
+    android:layout_height="match_parent"
+    xmlns:shimmer="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorWhite"
+    android:orientation="vertical"
+    tools:context=".ui.main.SearchFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="10dp"
+        >
+        <EditText
+            android:id="@+id/searchText_search"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:drawableStart="@drawable/white_search_icon"
+            android:drawableTint="#70000000"
+            android:drawablePadding="15dp"
+            android:paddingStart="12dp"
+            android:paddingEnd="20dp"
+            android:fontFamily="@font/montserrat_medium"
+            android:hint="Search an item"
+            android:textColor="@color/colorPrimary"
+            android:textColorHint="#70000000"
+            android:textSize="14sp"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:visibility="visible"
+            android:background="@drawable/edittext_background"
+            />
+
+        <Button
+            android:id="@+id/searchButton_search"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="Search"
+            android:background="@null"
+            android:layout_gravity="center_vertical"
+            android:textAllCaps="false"
+            android:textSize="14sp"
+            android:fontFamily="@font/montserrat_medium"
+            android:textColor="@color/colorPrimary"
+            />
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        >
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmerSearchContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            shimmer:shimmer_duration="2000"
+            android:visibility="invisible"
+            android:layout_centerHorizontal="true"
+            >
+            <include
+                layout="@layout/placeholder_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+        <TextView
+            android:id="@+id/status_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:text="Your search did not have any results"
+            android:textColor="@color/colorGray"
+            android:fontFamily="@font/montserrat_medium"
+            android:textSize="14sp"
+            android:layout_centerInParent="true"
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/searchRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_height="wrap_content"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            />
+    </RelativeLayout>
+
+</LinearLayout>

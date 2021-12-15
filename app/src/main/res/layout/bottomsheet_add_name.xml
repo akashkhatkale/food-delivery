@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/colorPrimary"
+    android:paddingHorizontal="20dp"
+    android:paddingVertical="10dp"
+    >
+
+    <View
+        android:layout_width="80dp"
+        android:layout_height="2dp"
+        android:background="#30ffffff"
+        android:layout_gravity="center_horizontal"
+        />
+
+
+    <EditText
+        android:id="@+id/nameText_name"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:drawableStart="@drawable/white_person_icon"
+        android:drawableTint="#50ffffff"
+        android:drawablePadding="25dp"
+        android:paddingStart="20dp"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/montserrat_medium"
+        android:hint="Enter your name"
+        android:textColor="@color/colorWhite"
+        android:textColorHint="#50ffffff"
+        android:textSize="12sp"
+        android:visibility="visible"
+        android:background="@drawable/edittext_background2"
+        />
+
+    <Button
+        android:id="@+id/submitButton_name"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:fontFamily="@font/montserrat_medium"
+        android:textColor="@color/colorWhite"
+        android:text="Confirm changes"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_centerInParent="true"
+        android:textAllCaps="false"
+        android:layout_marginBottom="10dp"
+        android:textSize="12sp"
+        android:background="@drawable/yellow_button_background"
+        />
+
+
+</LinearLayout>
